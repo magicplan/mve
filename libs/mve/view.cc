@@ -844,7 +844,7 @@ View::save_image_intern (ImageProxy* proxy)
     /* Save the new image. */
     //std::cout << "View: Saving image: " << filename << std::endl;
     if (use_png_format)
-        image::save_png_file(
+        image::save_file(
             std::dynamic_pointer_cast<ByteImage>(proxy->image), fname_new);
     else
         image::save_mvei_file(proxy->image, fname_new);
